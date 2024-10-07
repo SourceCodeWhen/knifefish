@@ -1,0 +1,370 @@
+[gd_scene load_steps=25 format=3 uid="uid://cber0hjhshhnx"]
+
+[ext_resource type="PackedScene" uid="uid://8q02v4fqhfix" path="res://Scenes/Player.tscn" id="1_fiea7"]
+[ext_resource type="Texture2D" uid="uid://dm3h5u46poy24" path="res://Assets/arcadefloor.png" id="2_df1to"]
+[ext_resource type="Material" uid="uid://pa1j0c7at1ci" path="res://Assets/Materials/aquarium.tres" id="3_tc4wb"]
+[ext_resource type="Texture2D" uid="uid://glbwelu25wyc" path="res://Assets/shit-water.jpeg" id="4_rs36s"]
+
+[sub_resource type="Sky" id="Sky_fp43x"]
+
+[sub_resource type="Environment" id="Environment_fg86x"]
+background_mode = 2
+sky = SubResource("Sky_fp43x")
+tonemap_mode = 3
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.665863, 0.550634, 0.480937, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1fdn"]
+albedo_texture = ExtResource("2_df1to")
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c4ey4"]
+material = SubResource("StandardMaterial3D_p1fdn")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6any8"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q60bq"]
+material = ExtResource("3_tc4wb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_02udl"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8cf6"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4siul"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cstvw"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w18q"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yndh3"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxwpg"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkjch"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05imo"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hggk8"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nrcl"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocji0"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgwed"]
+atlas = ExtResource("4_rs36s")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55ui7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8cf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4siul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cstvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w18q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yndh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxwpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkjch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05imo")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hggk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nrcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocji0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgwed")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Level" parent="." instance=ExtResource("1_fiea7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57959, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fg86x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 8.13149, 200)
+light_color = Color(0.46018, 0.369816, 0.29318, 1)
+light_energy = 2.0
+light_angular_distance = 5.0
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
+mesh = SubResource("PlaneMesh_c4ey4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6any8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(29, 0, 0, 0, 5, 0, 0, 0, 0.5, 15.4, 1.25, 29.75)
+mesh = SubResource("BoxMesh_q60bq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_02udl")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(29, 0, 0, 0, 5, 0, 0, 0, 0.5, -15.4, 1.25, 29.75)
+mesh = SubResource("BoxMesh_q60bq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_02udl")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.26763e-06, 0, 0.5, 0, 5, 0, -29, 0, -2.18557e-08, 12.5, 1.25, 15)
+mesh = SubResource("BoxMesh_q60bq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_02udl")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.26763e-06, 0, 0.5, 0, 5, 0, -29, 0, -2.18557e-08, -12.5, 1.25, 15)
+mesh = SubResource("BoxMesh_q60bq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_02udl")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(26, 0, 0, 0, -2.18557e-06, -0.5, 0, 50, -2.18557e-08, 0, 4, 15)
+mesh = SubResource("BoxMesh_q60bq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_02udl")
+
+[node name="BlueWallLightArray" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.5, 2.5, 29.4)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5, 2.5, 29.4)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.5102, 2.5, 29.4)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10.0102, 2.5, 29.4)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10.2458, 2.51809, 29.4044)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.74575, 2.51809, 29.4044)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.23555, 2.51809, 29.4044)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="BlueWallLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.73555, 2.51809, 29.4044)
+light_color = Color(0.402992, 0.409812, 0.999991, 1)
+light_energy = 1.323
+light_indirect_energy = 3.895
+light_bake_mode = 1
+spot_attenuation = 1.61
+spot_angle = 26.6232
+spot_angle_attenuation = 1.41421
+
+[node name="PaleCeilingLightArray" type="Node3D" parent="."]
+
+[node name="SpotLight1" type="SpotLight3D" parent="PaleCeilingLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight2" type="SpotLight3D" parent="PaleCeilingLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight3" type="SpotLight3D" parent="PaleCeilingLightArray"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="PaleCeilingLightArray2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="SpotLight1" type="SpotLight3D" parent="PaleCeilingLightArray2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+light_bake_mode = 1
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight2" type="SpotLight3D" parent="PaleCeilingLightArray2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight3" type="SpotLight3D" parent="PaleCeilingLightArray2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="PaleCeilingLightArray3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="SpotLight1" type="SpotLight3D" parent="PaleCeilingLightArray3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight2" type="SpotLight3D" parent="PaleCeilingLightArray3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="SpotLight3" type="SpotLight3D" parent="PaleCeilingLightArray3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.5, 3.75, 0)
+light_color = Color(0.529067, 0.529067, 0.529067, 1)
+light_energy = 10.0
+spot_angle = 84.8
+spot_angle_attenuation = 0.000244141
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.603357, -10.33)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_55ui7")
+animation = &"new_animation_1"
+frame_progress = 0.451649
